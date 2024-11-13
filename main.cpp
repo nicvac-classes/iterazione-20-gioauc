@@ -2,10 +2,15 @@
 using namespace std;
 
 int main() {
-    string nome;
-    cout << "Inserisci il tuo nome: ";
-    cin >> nome;
-    cout << "Ciao " <<nome<< "!" << endl;
-}
+    int mattoncini, mattoncininecessari, altezza;
 
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
+    altezza = 0;
+    cout << "Quanti sono i mattoncini?" << endl;
+    cin >> mattoncini;
+    while (mattoncini >= mattoncininecessari + (altezza + 1)) {
+        altezza = altezza + 1;
+        mattoncininecessari = mattoncininecessari + altezza;
+    }
+    cout << "L'altezza della piramide è di " << altezza << " piani " << endl;
+    return 0;
+}
